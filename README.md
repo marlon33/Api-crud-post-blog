@@ -39,7 +39,7 @@ Api utiliza por padrão o MongoDB
 
 Você deve configurar corretamente o arquivo `.env` conforme abaixo:
 Você pode utilizar o https://mlab.com/plans/pricing/#plan-type=sandbox como banco de dados, versão gratuita.
-
+- [iNSTALAÇÃO MONGODB](https://github.com/marlon33/api-crud-post-blog/blob/main/Instalacao.md) Instalação mongoDDB.
 ```
 mongodb+srv://<NameUser>:<password>@cluster0.ng1wy.mongodb.net/<COLLATION>?retryWrites=<TRUE/FALSE>&w=majority
 MongoDB_HOST = '<NameUser>:<password>@cluster0.ng1wy.mongodb.net/'
