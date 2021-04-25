@@ -5,14 +5,6 @@
 
 ### 1- Clone ou baixe o projeto e instale as dependências:
 
-```bash
-$ git clone https://github.com/maurobonfietti/rest-api-slim-php.git
-$ cd rest-api-slim-php
-$ cp .env.example .env
-$ composer install
-```
-
-
 ### 2- Crie um banco de dados [MongoDB](https://www.mongodb.com/).
 
 Nome o banco de dados pode a sua escolha:
