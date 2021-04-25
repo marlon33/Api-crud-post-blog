@@ -18,12 +18,14 @@ Used technologies: `PHP 7, Slim 4, MongoDB, PHPUnit, dotenv`.
 Baixe o repositório ou clone ele:
 Dependencias
 ```bash
-$ composer require slim/slim:"^4.5"
-$ composer require mongodb/mongodb
-$ composer require slim/psr7
-$ composer require vlucas/phpdotenv
-$ composer require pimple/pimple
-$ composer require phpunit/phpunit --dev
+composer require slim/slim:"^4.5"
+composer require mongodb/mongodb
+composer require slim/psr7
+composer require vlucas/phpdotenv
+composer require pimple/pimple
+composer require phpunit/phpunit --dev
+composer require firebase/php-jwt
+composer require tuupola/slim-jwt-auth
 ```
 - [slim/slim](https://github.com/slimphp/Slim): Slim Framework utilizado para a construção da API.
 - [mongodb/mongo-php-library](https://github.com/mongodb/mongo-php-library): MongoDB Utilizado como Banco de Dados.
