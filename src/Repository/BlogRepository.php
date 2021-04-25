@@ -16,7 +16,18 @@ final class BlogRepository
     {
         return $this->database;
     }
-
+    public function findAndGet(int $postId): object
+    {
+        $post = $this->getDb()
+            ->Articles
+            ->findOne(
+                ['_id' => $postId]
+            );
+        if (!$post) {
+            throw new BlogException('Post not found.', 404);
+        }
+        return $post;
+    }
     /* Pega o ultimo Id do Ultimo registro no banco de dados utilizado para incremento de _id*/
     public function getLastId($collection){
         $numRow = $this->getDb()->$collection->count();
@@ -67,5 +78,28 @@ final class BlogRepository
             );
         }
         return array('status'=>'success','id_post'=>$id);
+    }
+
+    public function update(object $post, object $data):object{
+        if(isset($data->title)){
+            $post->title = $data->title;
+        }        
+        if (isset($data->body)) {
+            $post->body = $data->body;
+        }
+        $this->getDb()->Articles->updateOne(
+            [
+                '_id' => $post->_id
+            ],
+            [ 
+                '$set' =>
+                    [
+                        'title' =>$post->title,
+                        'body' =>$post->body,
+                        'modified' =>time()
+                    ]
+            ]
+        );
+        return $this->findAndGet((int) $post->_id);
     }
 }
