@@ -2,8 +2,6 @@
 $app->get('/', 'App\Controller\Home:getHelp');
 $app->get('/status', 'App\Controller\Home:getStatus');
 
-$app->get('/generic', App\Controller\Generic\GetAll::class);
-
 /* Busca todos os posts já criados */
 $app->get('/posts', App\Controller\Blog\GetAll::class);
 
