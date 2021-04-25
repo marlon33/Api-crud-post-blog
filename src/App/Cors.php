@@ -12,7 +12,7 @@ return static function (App $app): void {
         "header" => "X-Token",
         "regexp" => "/(.*)/",
         "path" => "/api",
-        "ignore" => ["/api/token","/api/register"],
+        "ignore" => ["/api/","/api/token","/api/register"],
         "secret" => $_SERVER['SECRET_KEY']
     ]));
     $app->add(function (Request $request, $handler): Response {
