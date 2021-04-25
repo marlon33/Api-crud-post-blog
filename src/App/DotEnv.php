@@ -8,5 +8,6 @@ $dotenv->required([
 	'MongoDB_HOST',
 	'MongoDB_COLLATION',
 	'MongoDB_RETRY_WRITES',
-	'MongoDB_W'
+	'MongoDB_W',
+	'SECRET_KEY'
 ]);
