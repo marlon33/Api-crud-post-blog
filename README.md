@@ -56,17 +56,18 @@ SLIM_BASE_PATH=''
 
 ### PADRÃO:
 
-- `GET /` Verifica a o estado da API e sua versão
+- `GET /api/api` Verifica a o estado da API e sua versão
 
-- `GET /status` Verifica a o status da API e sua versão
+- `GET /api/status` Verifica a o status da API e sua versão
 
 ### CRUD:
 
-- `GET /posts` Busca todos os posts e retorna um `array`
-- `POST /posts` Cria um post e retorna `array` contendo o STATUS e o ID
-- `GET /posts/{id}` Busca o post pelo `{id}` e retorna um `objeto`
-- `PUT /posts/{id}` Busca o post pelo `{id}` atualiza o post e retorna um `objeto`
-- `DELETE /posts/{id}` Busca o post pelo `{id}` deleta o post e retorna um `objeto`
+- `GET /api/posts` Busca todos os posts e retorna um `array`
+- `POST /api/posts` Cria um post e retorna `array` contendo o STATUS e o ID
+- `GET /api/posts/{id}` Busca o post pelo `{id}` e retorna um `objeto`
+- `PUT /api/posts/{id}` Busca o post pelo `{id}` atualiza o post e retorna um `objeto`
+- `POST /api/token` Busca token
+- `POST /api/register` Cadastra novo usuario
 
 ### DOCUMENTAÇÃO OFICIAL
 - [MongoDB](https://docs.mongodb.com/php-library/v1.8/)
