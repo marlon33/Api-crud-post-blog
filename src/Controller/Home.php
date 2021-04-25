@@ -32,7 +32,7 @@ final class Home
 
     public function getStatus(Request $request, Response $response): Response
     {
-        $this->container->get('db');
+        $this->container->get('mongoDB');
         $status = [
             'status' => [
                 'database' => 'OK',
