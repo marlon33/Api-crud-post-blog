@@ -1,5 +1,5 @@
 <?php
-namespace App\Controller\Generic;
+namespace App\Controller\Blog;
 
 use App\Helper\JsonResponse;
 use Psr\Http\Message\ResponseInterface as Response;

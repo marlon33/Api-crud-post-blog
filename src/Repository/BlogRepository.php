@@ -5,14 +5,14 @@ use App\Exception\BlogException;
 
 final class BlogRepository
 {
-    private \PDO $database;
+    private $database;
 
-    public function __construct(\PDO $database)
+    public function __construct($database)
     {
         $this->database = $database;
     }
 
-    public function getDb(): \PDO
+    public function getDb()
     {
         return $this->database;
     }
