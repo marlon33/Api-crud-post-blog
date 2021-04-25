@@ -39,4 +39,9 @@ final class BlogService
         $data = json_decode((string) json_encode($input), false);
         return $this->blogRepository->update($post, $data);
     }
+    public function delete(int $postId): object
+    {
+        $this->findAndGet($postId);
+        return $this->blogRepository->delete($postId);
+    }
 }

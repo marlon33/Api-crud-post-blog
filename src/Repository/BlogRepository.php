@@ -24,7 +24,7 @@ final class BlogRepository
                 ['_id' => $postId]
             );
         if (!$post) {
-            throw new BlogException('Post not found.', 404);
+            throw new BlogException('Post não encontrado.', 404);
         }
         return $post;
     }
@@ -101,5 +101,24 @@ final class BlogRepository
             ]
         );
         return $this->findAndGet((int) $post->_id);
+    }
+    public function delete(int $postId): object
+    {   
+        $this->findAndGet($postId);
+        $delete = ['_id' => $postId];
+        $t = $this->getDb()->Articles->deleteMany($delete)->getDeletedCount();
+        if($t>0){
+            $res = array(
+                "message"=>"Post deletado",
+                "status"=>"success",
+                "code"=> 200
+            );
+            $t = json_decode((string) json_encode($res), false);
+
+
+        }else{
+            throw new BlogException('Post não encontrado.', 404);
+        }
+        return $t;
     }
 }

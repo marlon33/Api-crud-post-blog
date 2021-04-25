@@ -23,3 +23,5 @@ $app->post('/posts', App\Controller\Blog\Create::class);
 $app->get('/posts/{id}', App\Controller\Blog\GetOne::class);
 /* Busca e atualiza o post */
 $app->put('/posts/{id}', App\Controller\Blog\Update::class);
+/* Busca e deleta post por ID */
+$app->delete('/posts/{id}', App\Controller\Blog\Delete::class);
