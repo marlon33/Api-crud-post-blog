@@ -2,12 +2,19 @@
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
+use Tuupola\Middleware\JwtAuthentication as JwtAuth;
 
 return static function (App $app): void {
     $app->options('/{routes:.+}', function (Request $request, Response $response) {
         return $response;
     });
-
+    $app->add(new JwtAuth([
+        "header" => "X-Token",
+        "regexp" => "/(.*)/",
+        "path" => "/api",
+        "ignore" => ["/api/token"],
+        "secret" => $_SERVER['SECRET_KEY']
+    ]));
     $app->add(function (Request $request, $handler): Response {
         $response = $handler->handle($request);
 

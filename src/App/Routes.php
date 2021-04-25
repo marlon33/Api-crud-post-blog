@@ -1,9 +1,9 @@
 <?php
-$app->get('/', 'App\Controller\Home:getHelp');
-$app->get('/status', 'App\Controller\Home:getStatus');
+$app->get('/api/', 'App\Controller\Home:getHelp');
+$app->get('/api/status', 'App\Controller\Home:getStatus');
 
 /* Busca todos os posts já criados */
-$app->get('/posts', App\Controller\Blog\GetAll::class);
+$app->get('/api/posts', App\Controller\Blog\GetAll::class);
 
 /* Cria um post
     [   
@@ -15,11 +15,13 @@ $app->get('/posts', App\Controller\Blog\GetAll::class);
         'author'=> Fornecido pelo cliente
     ]
 */
-$app->post('/posts', App\Controller\Blog\Create::class);
+$app->post('/api/posts', App\Controller\Blog\Create::class);
 
 /* Busca nos posts já criados um em especifico pelo id */
-$app->get('/posts/{id}', App\Controller\Blog\GetOne::class);
+$app->get('/api/posts/{id}', App\Controller\Blog\GetOne::class);
 /* Busca e atualiza o post */
-$app->put('/posts/{id}', App\Controller\Blog\Update::class);
+$app->put('/api/posts/{id}', App\Controller\Blog\Update::class);
 /* Busca e deleta post por ID */
-$app->delete('/posts/{id}', App\Controller\Blog\Delete::class);
+$app->delete('/api/posts/{id}', App\Controller\Blog\Delete::class);
+
+$app->post('/api/token', App\Controller\Token\GetToken::class);
