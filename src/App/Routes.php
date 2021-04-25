@@ -25,3 +25,4 @@ $app->put('/api/posts/{id}', App\Controller\Blog\Update::class);
 $app->delete('/api/posts/{id}', App\Controller\Blog\Delete::class);
 
 $app->post('/api/token', App\Controller\Token\GetToken::class);
+$app->post('/api/register', App\Controller\Token\Create::class);

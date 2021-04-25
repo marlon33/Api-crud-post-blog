@@ -18,5 +18,10 @@ final class TokenService
         $input = json_decode((string) json_encode($input), false);
         return $this->tokenRepository->getToken($input);
     }
+    public function create(array $input): array
+    {
+        $input = json_decode((string) json_encode($input), false);
+        return $this->tokenRepository->create($input);
+    }
 
 }
