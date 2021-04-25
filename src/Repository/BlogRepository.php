@@ -1,9 +1,9 @@
 <?php
 namespace App\Repository;
 
-use App\Exception\GenericException;
+use App\Exception\BlogException;
 
-final class GenericRepository
+final class BlogRepository
 {
     private \PDO $database;
 
