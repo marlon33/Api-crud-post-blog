@@ -18,10 +18,10 @@ final class BlogRepository
     }
     public function getAll(): array
     {
-        /*$query = 'SELECT * FROM `Tabela`';
-        $statement = $this->getDb()->prepare($query);
-        $statement->execute();*/
-
-        return array('status'=>'tudo certo');
+        /* Recebe a chamada do BlogService e pesquisa no banco de daos para encontrar todos os registros e retorna um Array()*/
+        return $this->getDb()
+            ->Articles  //Nome da *Tabela* dentro do MongoDB
+            ->find()    // Função de pesquisa
+            ->toArray(); // Retorno
     }
 }

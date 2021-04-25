@@ -14,6 +14,7 @@ final class BlogService
     }
     public function getAll(): array
     {
+    	/* Chama a função getAll() que esta no arquivo Repository/BlogRepository.php e deve ser retornado um array*/
         return $this->blogRepository->getAll();
     }
 }
