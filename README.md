@@ -1,6 +1,6 @@
 # CRUD API POST BLOG
 
-API RESTful CRUD post para blog, usando [Slim PHP micro framework](https://www.slimframework.com).
+API RESTful CRUD post para blog, usando [Slim PHP micro framework](https://www.slimframework.com) e [MongoDB](https://mongodb.com)
 
 Used technologies: `PHP 7, Slim 4, MongoDB, PHPUnit, dotenv`.
 
@@ -66,3 +66,6 @@ SLIM_BASE_PATH=''
 - `PUT /posts/{id}` Busca o post pelo `{id}` atualiza o post e retorna um `objeto`
 - `DELETE /posts/{id}` Busca o post pelo `{id}` deleta o post e retorna um `objeto`
 
+### DOCUMENTAÇÃO OFICIAL
+- [MongoDB](https://docs.mongodb.com/php-library/v1.8/)
+- [Slim Framework](https://www.slimframework.com/docs/v4/)
