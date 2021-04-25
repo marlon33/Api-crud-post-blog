@@ -6,6 +6,10 @@ Used technologies: `PHP 7, Slim 4, MongoDB, PHPUnit, dotenv`.
 
 ## INSTALAÇÃO:
 
+```
+composer require marlon33/api-crud-post-blog
+```
+
 ### Requisitos:
 
 - Composer.
