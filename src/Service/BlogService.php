@@ -17,4 +17,10 @@ final class BlogService
     	/* Chama a função getAll() que esta no arquivo Repository/BlogRepository.php e deve ser retornado um array*/
         return $this->blogRepository->getAll();
     }
+    public function create(array $input):array
+    {
+        /* Torna o $input que e um array em um objeto para ser enviado ao BlogRepository melhor forma de ser tratado */
+        $post = json_decode((string) json_encode($input), false);
+        return $this->blogRepository->create($post);
+    }
 }
