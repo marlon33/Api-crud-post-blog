@@ -54,7 +54,7 @@ Status: 200 OK
 //http://localhost/api/register
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, 'http://localhost/api/tooken');
+curl_setopt($ch, CURLOPT_URL, 'http://localhost/api/token');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 $post = array(
