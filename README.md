@@ -78,5 +78,5 @@ SLIM_BASE_PATH=''
 - [Slim Framework](https://www.slimframework.com/docs/v4/)
 
 ### DOCUMENTAÇÃO API
-- [DOCUMENTAÇÃO DE USO](https://github.com/marlon33/api-crud-post-blog/blob/main/Instalacao.md)
+- [DOCUMENTAÇÃO DE USO](https://github.com/marlon33/api-crud-post-blog/blob/main/Documentacao.md)
 
